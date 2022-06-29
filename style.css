@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* height: 100vh; */
+    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size:30% 70%, 30% 30%;
+    background-position: right top, left bottom;
+    background-color: hsl(240, 78%, 98%);
+    color: hsl(232, 13%, 33%);
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+h2{
+    margin: 10px 0;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    font-size: 0.5rem;
+    margin: 20px 0;
+}
+.toggle-button{
+    /* position: absolute; */
+    width: 60px;
+    height: 30px;
+    margin: 0px 10px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+}
+.toggle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.toggle-button:hover {
+    cursor: pointer;
+    background-image: none;
+    background-color: hsla(237, 63%, 64%, 0.5);
+
+}
+.toggle.active{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    left: 30px;
+    top: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+main > div{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 0.5rem;
+}
+h3{
+    margin: 10px 0;
+}
+.m-price, .a-price{
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+.info{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+.info P:first-child{
+    border-top: 1px solid hsl(234, 14%, 74%);
+
+}
+.info p{
+    padding: 10px;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    width: 80%;
+    text-align: center;
+}
+div > button {
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    text-transform: uppercase;
+    color: #fff;
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: 0;
+    border-radius: 5px;
+}
+div > button:hover{
+    background-image: none;
+    background-color: #fff;
+    border: 1px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+    cursor: pointer;
+}
+.professional{
+    background-image: linear-gradient(to bottom,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: hsl(240, 78%, 98%);
+    padding: 20px 0;
+}
+.professional button {
+    background-image: none;
+    background-color: hsl(240, 78%, 98%);
+    color: hsl(237, 63%, 64%);
+}
+.professional button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid hsl(240, 78%, 98%);
+    color: hsl(240, 78%, 98%);
+}
+.professional .info p{
+    padding: 10px 0;
+    /* border-bottom: 1px solid hsl(240, 78%, 98%); */
+}
+.m-price{
+  display: none;
+}
+.m-price.active{
+    display: block;
+}
+.a-price.active{
+    display: none;
+}
+.info{
+    width: 100%;
+}
+@media screen and (max-width:400px) {
+   body{
+    /* padding: 10px; */
+    background-size:20% 30%, 30% 30%;
+   }
+    main{
+    flex-direction: column;
+    margin-top: 10px;
+
+   } 
+   header{
+        margin: 10px 0;
+   }
+   main > div{
+    width: 100%;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 0.5rem;
+}
+}
